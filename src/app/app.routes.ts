@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-import { AppComponent } from './app.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
+import { HomeComponent } from './module/home/home.component';
 
 export const routes: Routes = [
     {
@@ -10,11 +10,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+                component: HomeComponent,
             },
             {
                 path: 'about',
-                loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule),
+                loadChildren: () => import('./module/about/about.module').then(m => m.AboutModule),
             },
         ]
     },
