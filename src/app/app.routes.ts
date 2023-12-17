@@ -4,6 +4,7 @@ import { NotFoundComponent } from './error/not-found/not-found.component';
 import { HomeComponent } from './page/home/home.component';
 import { AccessDeniedComponent } from './error/access-denied/access-denied.component';
 import { ServerErrorComponent } from './error/server-error/server-error.component';
+import { LayoutAboutComponent } from './layout-about/layout-about.component';
 
 export const routes: Routes = [
   {
@@ -17,7 +18,10 @@ export const routes: Routes = [
       {
         path: 'about',
         loadChildren: () =>
-          import('./page/about/about.module').then((m) => m.AboutModule),
+          // import('./page/about/about.module').then((m) => m.AboutModule),
+          import('../app/layout-about/layout-about.module').then(
+            (m) => m.LayoutAboutModule
+          ),
       },
     ],
   },
