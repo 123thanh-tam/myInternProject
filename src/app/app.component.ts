@@ -9,7 +9,7 @@ import { LayoutModule } from './layout/layout.module';
   standalone: true,
   imports: [CommonModule, RouterOutlet, LayoutModule, LayoutAboutModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'myproject2';

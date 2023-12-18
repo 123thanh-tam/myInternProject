@@ -17,6 +17,6 @@ const components = [
 @NgModule({
   imports: [CommonModule, RouterOutlet],
   declarations: [...components],
-  exports: [LayoutComponent],
+  exports: [...components],
 })
 export class LayoutModule {}
